@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StyleHub — Modern Clothing Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">StyleHub</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#" onclick="openAuthModal()">Login / Register</a></li>
+        <li><a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- AUTHENTICATION MODAL -->
+  <div id="auth-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAuthModal()">&times;</span>
+      <h2 id="auth-title">Login / Register</h2>
+      <form id="auth-form" onsubmit="handleAuth(event)">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="auth-email" required placeholder="example@mail.com">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="auth-password" required placeholder="Min 8 chars, 1 Upper, 1 Lower, 1 Number, 1 Symbol">
+          <small>Must contain uppercase, lowercase, numbers, and special characters.</small>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>New Season, New Style</h2>
+      <p>Discover our latest clothing collection crafted for you</p>
+      <a href="#shop" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section id="shop" class="products">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="product-grid" id="product-grid">
+      <!-- Products will be inserted by JavaScript -->
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About StyleHub</h2>
+    <p>We bring you the latest fashion trends at affordable prices. Quality clothing, fast shipping, and great customer service exclusively in Egypt.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 StyleHub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
